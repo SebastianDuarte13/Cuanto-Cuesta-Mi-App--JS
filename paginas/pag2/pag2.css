@@ -6,6 +6,8 @@
 body{
     height: 100%;
     padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
     overflow-y: auto;
 }
 
@@ -17,8 +19,9 @@ body, html {
 }
 header{
     position: absolute;
-    margin: 0px 47%;
-    padding: 32px;  
+    left: 49.5%;
+    font-size: 13px;
+    top: 30px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .principal{
@@ -43,13 +46,13 @@ header{
 .title-pag2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
-    margin: 15px 0;
+    margin: 16px 0;
 }
 
 .photos{
     width: 100%;
     display: flex;
-    
+    font-size: 20px;
 }
 
 .part1{
@@ -66,6 +69,20 @@ header{
 .foto-pag2{
     width: 150px;
     height: 150px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    border: none;
+    position: relative;
+    transition: transform 0.7s , box-shadow 0.7s ease;
+    background-color: #eff5f9   ;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    will-change: box-shadow, transform;
+    background:#F5F9FB;
 }
 
 @media screen and (max-width: 960px) {
@@ -82,9 +99,6 @@ header{
         flex-direction: row;
     }
 
-    header{
-        margin: 0px 45%;
-    }
 
     .foto-pag2{
         width: 80px;
@@ -100,8 +114,5 @@ header{
     }
     .photos{
         flex-direction: column;
-    }
-    header{
-        margin: 0px 38%;
     }
 }
