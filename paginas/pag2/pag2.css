@@ -2,3 +2,106 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    height: 100%;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+body, html {
+    position: relative;
+    height: 100%;
+    background-color: #eff5f9   ;
+    
+}
+header{
+    position: absolute;
+    margin: 0px 47%;
+    padding: 32px;  
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.principal{
+    height: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.independiente{
+    margin: 8px;
+    border: 2px;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.title-pag2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.photos{
+    width: 100%;
+    display: flex;
+    
+}
+
+.part1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.part2{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.foto-pag2{
+    width: 150px;
+    height: 150px;
+}
+
+@media screen and (max-width: 960px) {
+    .part1{
+        flex-direction: column;
+    }
+    .part2{
+        flex-direction: column;
+    }
+
+    .independiente{
+        display: flex;
+        align-items: center ;
+        flex-direction: row;
+    }
+
+    header{
+        margin: 0px 45%;
+    }
+
+    .foto-pag2{
+        width: 80px;
+        height: 80px;
+    }
+    .photos{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 679px) {
+    .title-pag2{
+        font-size: 20px;
+    }
+    .photos{
+        flex-direction: column;
+    }
+    header{
+        margin: 0px 38%;
+    }
+}
