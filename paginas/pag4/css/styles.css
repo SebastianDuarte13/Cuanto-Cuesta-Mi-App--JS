@@ -36,12 +36,19 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 16%;
+
 }
-
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
 .independiente{
-
     text-align: center;
+    padding-left: 5vw;
 }
 
 .title-pag2{
