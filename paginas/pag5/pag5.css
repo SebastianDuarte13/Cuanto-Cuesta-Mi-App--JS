@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    color: #3D3935;
 }
 
 body{
@@ -8,7 +9,6 @@ body{
     padding: 1rem;
     padding-bottom: 0;
     padding-top: 0;
-    overflow-y: auto;
 }
 
 body, html {
@@ -17,14 +17,26 @@ body, html {
     background-color: #eff5f9   ;
     
 }
-header{
-    position: absolute;
-    left: 49.5%;
-    font-size: 13px;
-    top: 30px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 20px;
+    color: #3D3935;
+    z-index: 1;
+}
+
+
+.anterior{
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    background:transparent  ;
     color: #3D3935;
 }
+
 .principal{
     height: 100%;
     max-width: 960px;
@@ -44,11 +56,25 @@ header{
     text-align: center;
 }
 
-.title-pag2{
+
+.title-pag5{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
-    margin: 16px 0;
+    margin: 20px 0;
     letter-spacing: 1px;
+    color: #3D3935;
+}
+
+.anterior{
+    padding: 20px;
+}
+
+h3{
+    padding: 20px;
+}
+
+.acumulado{
+    padding: 20px;
 }
 
 .photos{
@@ -101,7 +127,7 @@ header{
         flex-direction: row;
     }
 
-    .title-pag2{
+    .title-pag5{
         text-align: center;
     }
 
@@ -120,7 +146,7 @@ header{
     .photos{
         flex-direction: column;
     }
-    .title-pag2{
+    .title-pag5{
         text-align: center;
     }
 }
