@@ -40,5 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         for (const entry of formData) {
             console.log(entry);
         }
+        document.getElementById('dynamicForm').addEventListener('submit', function(event) {
+            window.location.href = "./paginas/pag2/pag2.html";
+        });
     });
 });

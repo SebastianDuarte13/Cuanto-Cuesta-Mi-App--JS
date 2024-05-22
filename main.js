@@ -1,1 +1,1 @@
-import "../js/formulario.js";
+import "./js/formulario.js";
