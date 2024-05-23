@@ -1,5 +1,6 @@
 import { LitElement, css, html } from 'lit'
 export class MyElement extends LitElement {
+link
 
     static get properties() {
         return {
@@ -8,6 +9,28 @@ export class MyElement extends LitElement {
         }
     }
 
+<<<<<<< HEAD
+    render() {
+        return html`
+        <body>
+        <div class="principal">
+            <div class="photos">
+                
+                <img src="/paginas/pag principal/princi.png" alt="">
+                <h1 class="tittle-pagpr">¿Cuánto cuesta desarrollar mi <span class="colores">app</span>?</h1>
+                <p class="parrafo">Calcula de forma rápida el coste para crear tu app, contestando estas sencillas preguntas.</p>
+                <button onclick="modal()" class="button" id="openFormButton">
+                    <h2 class="dentro">EMPEZAR</h2>
+                </button>   
+                
+                </div>
+        </div>
+    </body>
+        `
+    }
+
+=======
+>>>>>>> 70e8713f801f693d6d158ebaf4c5129452738d13
     static get styles() {
         return css`
             *{
@@ -16,17 +39,19 @@ export class MyElement extends LitElement {
             }
             
             body{
+                margin-top:10%;
                 height: 100%;
                 padding: 1rem;
                 padding-bottom: 0;
                 padding-top: 0;
                 overflow-y: auto;
+                background-color:#3d3935;;
             }
             
             body, html {
                 position: relative;
                 height: 100%;
-                background-color: #eff5f9   ;
+                background-color: #3d3935;   ;
                 
             }
             .hidden {
@@ -36,7 +61,7 @@ export class MyElement extends LitElement {
                 margin-top: 20px;
                 border: 1px solid #ccc;
                 padding: 20px;
-                background-color: #f9f9f9;
+                background-color: #3d3935;;
             }
             .principal{
                 height: 100%;
@@ -47,6 +72,10 @@ export class MyElement extends LitElement {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .colores{
+                color: #14e2cd;
             }
             
             .button{
@@ -104,7 +133,11 @@ export class MyElement extends LitElement {
             }
             
             .tittle-pagpr{
+<<<<<<< HEAD
+                font-size: 55px;
+=======
                 font-size: 50px;
+>>>>>>> 70e8713f801f693d6d158ebaf4c5129452738d13
                 margin: 10px 0;
                 letter-spacing: 2px;
             }
