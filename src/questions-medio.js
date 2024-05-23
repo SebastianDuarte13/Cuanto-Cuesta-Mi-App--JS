@@ -275,12 +275,13 @@ export class MediumPlantilla_pag2 extends LitElement {
     static get styles() {
         return css`
         header{
-            position: absolute;
+            position: fixed;
             left: 49.5%;
             font-size: 13px;
             top: 30px;
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             color: #fff;
+            z-index: 1;
         }
         .principal{
             height: 100%;
