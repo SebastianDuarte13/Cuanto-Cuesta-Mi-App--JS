@@ -1,5 +1,6 @@
 import { LitElement, css, html } from 'lit'
 export class MyElement extends LitElement {
+link
 
     static get properties() {
         return {
@@ -14,35 +15,15 @@ export class MyElement extends LitElement {
         <div class="principal">
             <div class="photos">
                 
-                <img src="/paginas/pag principal/principal.png" alt="">
-                <h1 class="tittle-pagpr">¿Cuánto cuesta desarrollar mi app?</h1>
+                <img src="/paginas/pag principal/princi.png" alt="">
+                <h1 class="tittle-pagpr">¿Cuánto cuesta desarrollar mi <span class="colores">app</span>?</h1>
                 <p class="parrafo">Calcula de forma rápida el coste para crear tu app, contestando estas sencillas preguntas.</p>
-    
-                <script>
-                    function modal() {
-                      // Function definition for modal
-                    }
-                </script>
                 <button onclick="modal()" class="button" id="openFormButton">
-                    <h2 class="dentro">CALCULAR COSTE</h2>
+                    <h2 class="dentro">EMPEZAR</h2>
                 </button>   
                 
                 </div>
         </div>
-        <div id="formContainer" class="hidden">
-            <form id="dynamicForm">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="id">id:</label>
-                <input type="text" id="id" name="id" required>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-        <script src="/main.js"></script>
-        <script src="/js/formulario.js"></script>
-        <script src="/paginas/texto y link/textoylink.js"></script>
-        
-        
     </body>
         `
     }
@@ -55,17 +36,19 @@ export class MyElement extends LitElement {
             }
             
             body{
+                margin-top:10%;
                 height: 100%;
                 padding: 1rem;
                 padding-bottom: 0;
                 padding-top: 0;
                 overflow-y: auto;
+                background-color:#3d3935;;
             }
             
             body, html {
                 position: relative;
                 height: 100%;
-                background-color: #eff5f9   ;
+                background-color: #3d3935;   ;
                 
             }
             .hidden {
@@ -75,7 +58,7 @@ export class MyElement extends LitElement {
                 margin-top: 20px;
                 border: 1px solid #ccc;
                 padding: 20px;
-                background-color: #f9f9f9;
+                background-color: #3d3935;;
             }
             .principal{
                 height: 100%;
@@ -86,6 +69,10 @@ export class MyElement extends LitElement {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .colores{
+                color: #14e2cd;
             }
             
             .button{
@@ -143,7 +130,7 @@ export class MyElement extends LitElement {
             }
             
             .tittle-pagpr{
-                font-size: 60px;
+                font-size: 55px;
                 margin: 10px 0;
                 letter-spacing: 2px;
             }

@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    padding: 1rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    overflow-y: auto;
+}
+
+body, html {
+    position: relative;
+    height: 100%;
+    background-color: #3d3935 ;
+    color: #fff;
+
+}

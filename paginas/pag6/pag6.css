@@ -95,7 +95,7 @@ h3{
     border: none;
     position: relative;
     transition: transform 0.4s , box-shadow 0.4s ease-out;
-    background-color: #eff5f9   ;
+    background-color: #3d3935  ;
     font-size: 18px;
     width: 100%;
 }
@@ -103,7 +103,7 @@ h3{
 .btn:hover {
     transform: translateY(-10px);
     will-change: box-shadow, transform;
-    background:#F5F9FB;
+    background:rgb(81, 77, 74);
 }
 
 @media screen and (max-width: 960px) {
