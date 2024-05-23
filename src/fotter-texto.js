@@ -10,13 +10,7 @@ export class TextoFinal extends LitElement {
     
     static get styles(){
         return css`
-        body {
-            font-size: 17px;
-            line-height: 1.5;
-            color: white;
-            background-color: #f9f9f9;
-            padding: 20%;
-        }
+       
         
         h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
@@ -64,6 +58,7 @@ export class TextoFinal extends LitElement {
         background-color: #f7f7f7;
         border-left: 4px solid #337ab7;
         padding: 10px;
+        padding-top:0;
         margin-bottom: 20px;
         }
         

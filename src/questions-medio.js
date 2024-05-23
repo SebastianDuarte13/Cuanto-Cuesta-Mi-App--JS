@@ -10,25 +10,10 @@ export class MediumPlantillaS extends LitElement {
 
     static get styles() {
         return css`
-        *{
-            margin: 0;
-            padding: 0;
-            color: #ffffff;
+        :host {
+            display: ${this.docsHint === 'hide' ? 'none' : 'block'};
         }
         
-        body{
-            height: 100%;
-            padding: 1rem;
-            padding-bottom: 0;
-            padding-top: 0;
-        }
-        
-        body, html {
-            position: relative;
-            height: 100%;
-            background-color: rgb(61, 57, 53); 
-            
-        }
         
         header {
             position: fixed;
@@ -351,7 +336,10 @@ export class MediumPlantilla_pag2 extends LitElement {
         
         @media screen and (max-width: 960px) {
             
-            
+            :host {
+                display: ${this.docsHint === 'hide' ? 'none' : 'block'};
+            }
+    
         
             .independiente{
                 display: flex;

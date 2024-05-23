@@ -11,22 +11,37 @@ link
 
     render() {
         return html`
-        <body>
-        <div class="principal">
-            <div class="photos">
-                
-                <img src="/paginas/pag principal/princi.png" alt="">
-                <h1 class="tittle-pagpr">¿Cuánto cuesta desarrollar mi <span class="colores">app</span>?</h1>
-                <p class="parrafo">Calcula de forma rápida el coste para crear tu app, contestando estas sencillas preguntas.</p>
-                <button onclick="modal()" class="button" id="openFormButton">
-                    <h2 class="dentro">EMPEZAR</h2>
-                </button>   
-                
+            <div class="principal">
+                <div class="photos">
+                    <img src="/paginas/pag principal/princi.png" alt="">
+                    <h1 class="tittle-pagpr">¿Cuánto cuesta desarrollar mi <span class="colores">app</span>?</h1>
+                    <p class="parrafo">Calcula de forma rápida el coste para crear tu app, contestando estas sencillas preguntas.</p>
+                    <button @click="${this.ocultarContenido}" class="button" id="openFormButton">
+                        <h2 class="dentro">EMPEZAR</h2>
+                    </button>   
                 </div>
-        </div>
-    </body>
-        `
+            </div>
+        `;
     }
+
+    ocultarContenido() {
+        document.body.querySelectorAll('my-element')
+            .forEach(element => {
+                element.style.display = 'none';
+            });
+        document.body.querySelectorAll('plantilla-mitad')
+            .forEach(element => {
+                element.style.display = 'initial';
+            });
+    }
+
+    mostrarContenido() {
+        document.body.querySelectorAll('plantilla-mitad')
+            .forEach(element => {
+                element.style.display = 'true';
+            });
+    }
+
 
     static get styles() {
         return css`
