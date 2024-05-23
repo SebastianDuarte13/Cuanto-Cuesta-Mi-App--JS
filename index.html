@@ -7,35 +7,15 @@
     <script type="module" src="/src/pagina-inicio.js"></script>
     <script type="module" src="/src/fotter-texto.js"></script>
     <script type="module" src="/src/questions-medio.js"></script>
+    <script type="module" src="/src/formulario-final.js"></script>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="principal">
-        <div class="photos">
-            <script>
-                function modal() {
-                  // Function definition for modal
-                }
-              </script>
-              
-              <button onclick="modal()" class="button" id="openFormButton">
-                <h2 class="dentro">Calcular costo</h2>
-              </button>   
-            
-            </div>
-    </div>
-    <div id="formContainer" class="hidden">
-        <form id="dynamicForm">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="id">id:</label>
-            <input type="text" id="id" name="id" required>
-            <button type="submit"><a href="/paginas/pag2/pag2.html">Enviar</a></button>
-        </form>
-    </div>
-    <script src="main.js"></script>
-    <script src="js/formulario.js"></script>
-    <plantilla-mitad></plantilla-mitad>
     <my-element></my-element>
-    <texto-final></texto-final>
+    <plantilla-mitad></plantilla-mitad>
+    <div  style="padding: 27%;">
+        <texto-final></texto-final>
+    </div>
+    <FormularioSneider></FormularioSneider>
 </body>
 </html>

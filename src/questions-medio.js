@@ -8,53 +8,6 @@ export class MediumPlantilla extends LitElement {
         }
     }
 
-    render() {
-        return html`
-        <header>
-            <button class="anterior">← Anterior</button>
-            <p class="pagina"><h3>3/10</h3></p>
-            <h3 class="acumulado">0€</h3>
-        </header>
-        <body>
-            <div class="principal">
-                <h2 class="title-pag5">¿Qué diseño quieres que tenga tu App?</h2>
-                <div class="photos">
-                    <div class="part1">
-                        <button class="btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-1.png" alt="Pequeña: menos de 3 páginas/50 productos" class="foto-pag2">
-                            <p class="espaciado">Interfaz sencilla</p>
-                        </div>
-                        </button>
-                        <button class=" btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-2.png" alt="Grande: más de 10 páginas/200 productos" class="foto-pag2">
-                            <p>Interfaz personalisada</p>
-                        </div>    
-                        </button>
-                    </div>
-                    <div class="part2">
-                        <button class="btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-3.png" alt="Mediana: menos de 10 páginas/200 productos" class="foto-pag2">
-                            <p>Interfaz replica de la web</p>
-                        </div>
-                        </button>
-                        <button class="btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-4.png" alt="No lo se" class="foto-pag2">
-                            <p>No necesito diseño</p>
-                        </div>
-                        </button>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            <script src="/paginas/texto y link/textoylink.js"></script>
-        </body>
-        `
-    }
     static get styles() {
         return css`
         *{
@@ -215,6 +168,54 @@ export class MediumPlantilla extends LitElement {
                 margin-top: 70px;
             }
         }
+        `
+    }
+
+    render() {
+        return html`
+        <header>
+            <button class="anterior">← Anterior</button>
+            <p class="pagina"><h3>3/10</h3></p>
+            <h3 class="acumulado">0€</h3>
+        </header>
+        <body>
+            <div class="principal">
+                <h2 class="title-pag5">¿Qué diseño quieres que tenga tu App?</h2>
+                <div class="photos">
+                    <div class="part1">
+                        <button class="btn">
+                        <div class="independiente">
+                            <img src="img/answer-3-1.png" alt="Pequeña: menos de 3 páginas/50 productos" class="foto-pag2">
+                            <p class="espaciado">Interfaz sencilla</p>
+                        </div>
+                        </button>
+                        <button class=" btn">
+                        <div class="independiente">
+                            <img src="img/answer-3-2.png" alt="Grande: más de 10 páginas/200 productos" class="foto-pag2">
+                            <p>Interfaz personalisada</p>
+                        </div>    
+                        </button>
+                    </div>
+                    <div class="part2">
+                        <button class="btn">
+                        <div class="independiente">
+                            <img src="img/answer-3-3.png" alt="Mediana: menos de 10 páginas/200 productos" class="foto-pag2">
+                            <p>Interfaz replica de la web</p>
+                        </div>
+                        </button>
+                        <button class="btn">
+                        <div class="independiente">
+                            <img src="img/answer-3-4.png" alt="No lo se" class="foto-pag2">
+                            <p>No necesito diseño</p>
+                        </div>
+                        </button>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <script src="/paginas/texto y link/textoylink.js"></script>
+        </body>
         `
     }
 }
