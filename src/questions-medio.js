@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit'
-export class MediumPlantilla extends LitElement {
+export class MediumPlantillaS extends LitElement {
 
     static get properties() {
         return {
@@ -122,7 +122,7 @@ export class MediumPlantilla extends LitElement {
         .btn:hover {
             transform: translateY(-10px);
             will-change: box-shadow, transform;
-            background:rgb(61, 57, 53);
+            background:rgb(81, 77, 74);
         }
         
         @media screen and (max-width: 960px) {
@@ -173,53 +173,48 @@ export class MediumPlantilla extends LitElement {
 
     render() {
         return html`
-        <header>
-            <button class="anterior">← Anterior</button>
-            <p class="pagina"><h3>3/10</h3></p>
-            <h3 class="acumulado">0€</h3>
-        </header>
+        
         <body>
-            <div class="principal">
-                <h2 class="title-pag5">¿Qué diseño quieres que tenga tu App?</h2>
-                <div class="photos">
-                    <div class="part1">
-                        <button class="btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-1.png" alt="Pequeña: menos de 3 páginas/50 productos" class="foto-pag2">
-                            <p class="espaciado">Interfaz sencilla</p>
-                        </div>
-                        </button>
-                        <button class=" btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-2.png" alt="Grande: más de 10 páginas/200 productos" class="foto-pag2">
-                            <p>Interfaz personalisada</p>
-                        </div>    
-                        </button>
-                    </div>
-                    <div class="part2">
-                        <button class="btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-3.png" alt="Mediana: menos de 10 páginas/200 productos" class="foto-pag2">
-                            <p>Interfaz replica de la web</p>
-                        </div>
-                        </button>
-                        <button class="btn">
-                        <div class="independiente">
-                            <img src="img/answer-3-4.png" alt="No lo se" class="foto-pag2">
-                            <p>No necesito diseño</p>
-                        </div>
-                        </button>
-                        
-                    </div>
-                    
+        <div class="principal">
+        <h2 class="title-pag5">¿Qué tipo de App necesitas?</h2>
+        <div class="photos">
+            <div class="part1">
+                <button class="btn">
+                <div class="independiente">
+                    <img src="images/IMG3/answer-3-1.png" alt="Pequeña: menos de 3 páginas/50 productos" class="foto-pag2">
+                    <p class="espaciado">Aplicacion Android</p>
                 </div>
+                </button>
+                <button class=" btn">
+                <div class="independiente">
+                    <img src="images/IMG3/answer-3-2.png" alt="Grande: más de 10 páginas/200 productos" class="foto-pag2">
+                    <p>Aplicacion iOS</p>
+                </div>    
+                </button>
             </div>
-            <script src="/paginas/texto y link/textoylink.js"></script>
-        </body>
+            <div class="part2">
+                <button class="btn">
+                <div class="independiente">
+                    <img src="images/IMG3/answer-3-3.png" alt="Mediana: menos de 10 páginas/200 productos" class="foto-pag2">
+                    <p>Aplicacion windows phone</p>
+                </div>
+                </button>
+                <button class="btn">
+                <div class="independiente">
+                    <img src="images/IMG3/answer-3-4.png" alt="No lo se" class="foto-pag2">
+                    <p>Aplicacion Android + iOS</p>
+                </div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <script src="/paginas/texto y link/textoylink.js"></script>
+</body>
         `
     }
 }
-window.customElements.define('plantilla-mitad', MediumPlantilla)
+window.customElements.define('plantilla-mitad', MediumPlantillaS)
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

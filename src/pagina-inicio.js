@@ -130,11 +130,7 @@ link
             }
             
             .tittle-pagpr{
-<<<<<<< HEAD
-                font-size: 55px;
-=======
                 font-size: 50px;
->>>>>>> 70e8713f801f693d6d158ebaf4c5129452738d13
                 margin: 10px 0;
                 letter-spacing: 2px;
             }
@@ -159,44 +155,7 @@ link
         `
     }
 
-    render() {
-        return html`
-        <body>
-        <div class="principal">
-            <div class="photos">
-                
-                <img src="/paginas/pag principal/principal.png" alt="">
-                <h1 class="tittle-pagpr">¿Cuánto cuesta desarrollar mi app?</h1>
-                <p class="parrafo">Calcula de forma rápida el coste para crear tu app, contestando estas sencillas preguntas.</p>
     
-                <script>
-                    function modal() {
-                      // Function definition for modal
-                    }
-                </script>
-                <button onclick="modal()" class="button" id="openFormButton">
-                    <h2 class="dentro">CALCULAR COSTE</h2>
-                </button>   
-                
-                </div>
-        </div>
-        <div id="formContainer" class="hidden">
-            <form id="dynamicForm">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="id">id:</label>
-                <input type="text" id="id" name="id" required>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-        <script src="/main.js"></script>
-        <script src="/js/formulario.js"></script>
-        <script src="/paginas/texto y link/textoylink.js"></script>
-        
-        
-    </body>
-        `
-    }
 }
 
 window.customElements.define('my-element', MyElement)
