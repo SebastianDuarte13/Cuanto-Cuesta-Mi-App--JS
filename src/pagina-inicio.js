@@ -9,7 +9,6 @@ link
         }
     }
 
-<<<<<<< HEAD
     render() {
         return html`
         <body>
@@ -29,8 +28,6 @@ link
         `
     }
 
-=======
->>>>>>> 70e8713f801f693d6d158ebaf4c5129452738d13
     static get styles() {
         return css`
             *{
