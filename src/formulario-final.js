@@ -32,8 +32,8 @@ class FormularioSneider extends LitElement {
             <input type="text" id="name" name="name" class="form-control" required />
           </div>
           <div class="form-group">
-            <label for="id">ID:</label>
-            <input type="email" id="id" name="id" class="form-control" required />
+            <label for="id">Correo:</label>
+            <input type="email" id="correo" name="correo" class="form-control" required />
           </div>
           <button type="submit" class="btn btn-primary">ENVIAR</button>
         </form>
@@ -118,10 +118,10 @@ class FormularioSneider extends LitElement {
   handleSubmit(event) {
     event.preventDefault();
     const name = this.shadowRoot.getElementById('name').value;
-    const id = this.shadowRoot.getElementById('id').value;
+    const correo = this.shadowRoot.getElementById('correo').value;
 
     // Guardar los datos en el objeto formData
-    this.formData.addEntry({ name, id });
+    this.formData.addEntry({ name, correo });
 
     // Reiniciar el formulario
     this.shadowRoot.getElementById('dynamicForm').reset();
@@ -131,22 +131,7 @@ class FormularioSneider extends LitElement {
       console.log(entry);
     }
   }
-  async postMethod(entries) {
-    try {
-      const response = await fetch(`${apiUrl}/client`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(client),
-      });
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-    } catch (error) {
-      console.error("Fetch error:", error);
-    }
-  }
+
 }
 
 
