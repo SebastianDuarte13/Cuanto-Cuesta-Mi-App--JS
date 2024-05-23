@@ -1,6 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
+=======
+    font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 70e8713f801f693d6d158ebaf4c5129452738d13
 }
 
 body{
@@ -17,4 +21,8 @@ body, html {
     background-color: #3d3935 ;
     color: #fff;
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 70e8713f801f693d6d158ebaf4c5129452738d13
