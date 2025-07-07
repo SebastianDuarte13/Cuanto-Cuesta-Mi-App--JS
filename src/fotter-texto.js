@@ -1,15 +1,70 @@
 import { LitElement, css, html } from 'lit'
+import { appState } from './app-state.js'
+
 export class TextoFinal extends LitElement {
 
     static get properties() {
         return {
-
-        docsHint: { type: String },
+            docsHint: { type: String },
+            calculatedPrice: { type: Number },
         }
+    }
+
+    constructor() {
+        super();
+        this.calculatedPrice = 0;
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+        this.calculatedPrice = appState.calculatePrice();
+    }
+
+    continueToForm() {
+        appState.nextStep();
     }
     
     static get styles(){
         return css`
+        :host {
+            display: none;
+        }
+        
+        .price-result {
+            background: linear-gradient(to right, #14e6d3, #8660f5);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .price-amount {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0;
+        }
+        
+        .price-currency {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .continue-button {
+            background: linear-gradient(to right, #14e6d3, #8660f5);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .continue-button:hover {
+            transform: translateY(-2px);
+        }
        
         
         h1, h2, h3, h4, h5, h6 {
@@ -83,6 +138,16 @@ export class TextoFinal extends LitElement {
     render(){
         return html`
         <body>
+        <div class="price-result">
+            <h2>¡Tu app costaría aproximadamente!</h2>
+            <div class="price-amount">$${this.calculatedPrice}</div>
+            <div class="price-currency">USD</div>
+        </div>
+        
+        <button class="continue-button" @click="${this.continueToForm}">
+            Obtener presupuesto detallado
+        </button>
+        
         <h1>¿Cuánto cuesta crear una app?</h1>
         <p>Listado de precios estimados.</p>
         <ol>

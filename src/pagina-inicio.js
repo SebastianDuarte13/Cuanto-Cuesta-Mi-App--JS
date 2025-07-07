@@ -1,11 +1,11 @@
 import { LitElement, css, html } from 'lit'
+import { appState } from './app-state.js'
+
 export class MyElement extends LitElement {
-link
 
     static get properties() {
         return {
-
-        docsHint: { type: String },
+            docsHint: { type: String },
         }
     }
 
@@ -25,14 +25,7 @@ link
     }
 
     ocultarContenido() {
-        document.body.querySelectorAll('my-element')
-            .forEach(element => {
-                element.style.display = 'none';
-            });
-        document.body.querySelectorAll('plantilla-mitad')
-            .forEach(element => {
-                element.style.display = 'initial';
-            });
+        appState.nextStep();
     }
 
     mostrarContenido() {

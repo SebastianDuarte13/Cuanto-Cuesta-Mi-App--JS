@@ -1,17 +1,27 @@
 import { LitElement, css, html } from 'lit'
+import { appState } from './app-state.js'
+
 export class MediumPlantillaS extends LitElement {
 
     static get properties() {
         return {
-
-        docsHint: { type: String },
+            docsHint: { type: String },
         }
+    }
+
+    constructor() {
+        super();
+    }
+
+    selectAnswer(answer) {
+        appState.addAnswer(answer);
+        appState.nextStep();
     }
 
     static get styles() {
         return css`
         :host {
-            display: ${this.docsHint === 'hide' ? 'none' : 'block'};
+            display: none;
         }
         
         
@@ -164,34 +174,33 @@ export class MediumPlantillaS extends LitElement {
         <h2 class="title-pag5">¿Qué tipo de App necesitas?</h2>
         <div class="photos">
             <div class="part1">
-                <button class="btn">
+                <button class="btn" @click="${() => this.selectAnswer('android')}">
                 <div class="independiente">
-                    <img src="images/IMG3/answer-3-1.png" alt="Pequeña: menos de 3 páginas/50 productos" class="foto-pag2">
-                    <p class="espaciado">Aplicacion Android</p>
+                    <img src="images/IMG3/answer-3-1.png" alt="Aplicación Android" class="foto-pag2">
+                    <p class="espaciado">Aplicación Android</p>
                 </div>
                 </button>
-                <button class=" btn">
+                <button class="btn" @click="${() => this.selectAnswer('ios')}">
                 <div class="independiente">
-                    <img src="images/IMG3/answer-3-2.png" alt="Grande: más de 10 páginas/200 productos" class="foto-pag2">
-                    <p>Aplicacion iOS</p>
+                    <img src="images/IMG3/answer-3-2.png" alt="Aplicación iOS" class="foto-pag2">
+                    <p>Aplicación iOS</p>
                 </div>    
                 </button>
             </div>
             <div class="part2">
-                <button class="btn">
+                <button class="btn" @click="${() => this.selectAnswer('windows')}">
                 <div class="independiente">
-                    <img src="images/IMG3/answer-3-3.png" alt="Mediana: menos de 10 páginas/200 productos" class="foto-pag2">
-                    <p>Aplicacion windows phone</p>
+                    <img src="images/IMG3/answer-3-3.png" alt="Aplicación Windows Phone" class="foto-pag2">
+                    <p>Aplicación Windows Phone</p>
                 </div>
                 </button>
-                <button class="btn">
+                <button class="btn" @click="${() => this.selectAnswer('hybrid')}">
                 <div class="independiente">
-                    <img src="images/IMG3/answer-3-4.png" alt="No lo se" class="foto-pag2">
-                    <p>Aplicacion Android + iOS</p>
+                    <img src="images/IMG3/answer-3-4.png" alt="Aplicación Android + iOS" class="foto-pag2">
+                    <p>Aplicación Android + iOS</p>
                 </div>
                 </button>
             </div>
-
         </div>
     </div>
     <script src="/paginas/texto y link/textoylink.js"></script>
@@ -207,62 +216,96 @@ export class MediumPlantilla_pag2 extends LitElement {
 
     static get properties() {
         return {
-
-        docsHint: { type: String },
+            docsHint: { type: String },
         }
+    }
+
+    constructor() {
+        super();
+    }
+
+    selectAnswer(answer) {
+        appState.addAnswer(answer);
+        appState.nextStep();
+    }
+
+    goBack() {
+        appState.previousStep();
     }
 
     render() {
         return html`
         <header>
-            <p><h3>1/10</h3></p>
+            <button @click="${this.goBack}" class="anterior">← Anterior</button>
+            <p><h3>2/10</h3></p>
         </header>
         <body>
         <div class="principal">
                 <h2 class="title-pag5">¿Qué nivel de calidad estás buscando?</h2>
                 <div class="photos">
                     <div class="part1">
-                        <button class="btn">
+                        <button class="btn" @click="${() => this.selectAnswer('optimal')}">
                             <div class="independiente">
-                                <img src="images/pag2/img-1-2.png" alt="sí" class="foto-pag2">
-                                <p class="espaciado">Calidad optima</p>
+                                <img src="images/pag2/img-1-2.png" alt="Calidad óptima" class="foto-pag2">
+                                <p class="espaciado">Calidad óptima</p>
                             </div>
-                            </button>
+                        </button>
                     </div>
                     <div class="part3">
-                        <button class=" btn">
+                        <button class="btn" @click="${() => this.selectAnswer('balanced')}">
                             <div class="independiente">
-                                <img src="images/pag2/img-2-2.png" alt="No" class="foto-pag2">
-                                <p>Buena relacion/calidad precio</p>
+                                <img src="images/pag2/img-2-2.png" alt="Buena relación calidad-precio" class="foto-pag2">
+                                <p>Buena relación calidad-precio</p>
                             </div>    
                         </button>
                     </div>
                     
                     <div class="part2">
-                        <button class="btn">
+                        <button class="btn" @click="${() => this.selectAnswer('basic')}">
                             <div class="independiente">
-                                <img src="images/pag2/answer-3-2.png" alt="No lo se" class="foto-pag2">
+                                <img src="images/pag2/answer-3-2.png" alt="Calidad básica" class="foto-pag2">
                                 <p>No me importa tanto la calidad</p>
                             </div>
+                        </button>
                     </div>
-                    
-                    </button>
                 </div>
             </div>
-            <script src="/paginas/texto y link/textoylink.js"></script>
         </body>
         `
     }
     static get styles() {
         return css`
+        :host {
+            display: none;
+        }
+        
         header{
             position: fixed;
-            left: 49.5%;
-            font-size: 13px;
             top: 30px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 13px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: #fff;
             z-index: 1;
+        }
+        
+        .anterior{
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .anterior:hover {
+            text-decoration: underline;
         }
         .principal{
             height: 100%;
@@ -335,15 +378,9 @@ export class MediumPlantilla_pag2 extends LitElement {
         }
         
         @media screen and (max-width: 960px) {
-            
-            :host {
-                display: ${this.docsHint === 'hide' ? 'none' : 'block'};
-            }
-    
-        
             .independiente{
                 display: flex;
-                align-items: center ;
+                align-items: center;
                 flex-direction: column;
             }
         
@@ -391,6 +428,11 @@ export class MediumPlantilla_pag2 extends LitElement {
             
             header{
                 top: 0;
+                padding: 10px;
+            }
+            
+            .principal{
+                margin-top: 70px;
             }
         }
         `
