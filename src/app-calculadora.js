@@ -25,95 +25,95 @@ export class AppCalculadora extends LitElement {
                 id: 'app_type',
                 title: '¿Qué tipo de App necesitas?',
                 options: [
-                    { value: 'android', label: 'Aplicación Android', price: 500, img: './paginas/pag3/img/answer-3-1.png' },
-                    { value: 'ios', label: 'Aplicación iOS', price: 700, img: './paginas/pag3/img/answer-3-2.png' },
-                    { value: 'windows', label: 'Aplicación Windows Phone', price: 400, img: './paginas/pag3/img/answer-3-3.png' },
-                    { value: 'hybrid', label: 'Aplicación Android + iOS', price: 1200, img: './paginas/pag3/img/answer-3-4.png' }
+                    { value: 'android', label: 'Aplicación Android', price: 500, img: '/paginas/pag3/img/answer-3-1.png' },
+                    { value: 'ios', label: 'Aplicación iOS', price: 700, img: '/paginas/pag3/img/answer-3-2.png' },
+                    { value: 'windows', label: 'Aplicación Windows Phone', price: 400, img: '/paginas/pag3/img/answer-3-3.png' },
+                    { value: 'hybrid', label: 'Aplicación Android + iOS', price: 1200, img: '/paginas/pag3/img/answer-3-4.png' }
                 ]
             },
             {
                 id: 'quality',
                 title: '¿Qué nivel de calidad estás buscando?',
                 options: [
-                    { value: 'optimal', label: 'Calidad óptima', price: 800, img: './paginas/pag2/img/img-1-2.png' },
-                    { value: 'balanced', label: 'Buena relación calidad-precio', price: 400, img: './paginas/pag2/img/img-2-2.png' },
-                    { value: 'basic', label: 'No me importa tanto la calidad', price: 0, img: './paginas/pag2/img/answer-3-2.png' }
+                    { value: 'optimal', label: 'Calidad óptima', price: 800, img: '/paginas/pag2/img/img-1-2.png' },
+                    { value: 'balanced', label: 'Buena relación calidad-precio', price: 400, img: '/paginas/pag2/img/img-2-2.png' },
+                    { value: 'basic', label: 'No me importa tanto la calidad', price: 0, img: '/paginas/pag2/img/answer-3-2.png' }
                 ]
             },
             {
                 id: 'design',
                 title: '¿Qué diseño quieres que tenga tu App?',
                 options: [
-                    { value: 'simple', label: 'Interfaz sencilla', price: 200, img: './paginas/pag3/img/answer-3-1.png' },
-                    { value: 'custom', label: 'Interfaz personalizada', price: 800, img: './paginas/pag3/img/answer-3-2.png' },
-                    { value: 'replica', label: 'Interfaz replica de la web', price: 500, img: './paginas/pag3/img/answer-3-3.png' },
-                    { value: 'no_design', label: 'No necesito diseño', price: 0, img: './paginas/pag3/img/answer-3-4.png' }
+                    { value: 'simple', label: 'Interfaz sencilla', price: 200, img: '/paginas/pag3/img/answer-3-1.png' },
+                    { value: 'custom', label: 'Interfaz personalizada', price: 800, img: '/paginas/pag3/img/answer-3-2.png' },
+                    { value: 'replica', label: 'Interfaz replica de la web', price: 500, img: '/paginas/pag3/img/answer-3-3.png' },
+                    { value: 'no_design', label: 'No necesito diseño', price: 0, img: '/paginas/pag3/img/answer-3-4.png' }
                 ]
             },
             {
                 id: 'monetization',
                 title: '¿Cómo quieres sacar beneficio a tu App?',
                 options: [
-                    { value: 'ads', label: 'Aplicación gratuita con publicidad', price: 300, img: './paginas/pag4/img/answer-4-1.png' },
-                    { value: 'paid', label: 'Aplicación de pago', price: 200, img: './paginas/pag4/img/answer-4-2.png' },
-                    { value: 'in_app', label: 'Compras dentro de la app', price: 600, img: './paginas/pag4/img/answer-4-3.png' },
-                    { value: 'other', label: 'Otros / No lo sé todavía', price: 100, img: './paginas/pag4/img/answer-4-4.png' }
+                    { value: 'ads', label: 'Aplicación gratuita con publicidad', price: 300, img: '/paginas/pag4/img/answer-4-1.png' },
+                    { value: 'paid', label: 'Aplicación de pago', price: 200, img: '/paginas/pag4/img/answer-4-2.png' },
+                    { value: 'in_app', label: 'Compras dentro de la app', price: 600, img: '/paginas/pag4/img/answer-4-3.png' },
+                    { value: 'other', label: 'Otros / No lo sé todavía', price: 100, img: '/paginas/pag4/img/answer-4-4.png' }
                 ]
             },
             {
                 id: 'size',
                 title: '¿Cómo de grande necesitas que sea la app?',
                 options: [
-                    { value: 'small', label: 'Pequeña: menos de 3 páginas/50 productos', price: 200, img: './paginas/pag5/images/img1-pag5.png' },
-                    { value: 'medium', label: 'Mediana: menos de 10 páginas/200 productos', price: 500, img: './paginas/pag5/images/img2-pag5.png' },
-                    { value: 'large', label: 'Grande: más de 10 páginas/200 productos', price: 1000, img: './paginas/pag5/images/img3-pag5.png' },
-                    { value: 'unknown', label: 'No lo sé', price: 300, img: './paginas/pag5/images/img4-pag5.png' }
+                    { value: 'small', label: 'Pequeña: menos de 3 páginas/50 productos', price: 200, img: '/paginas/pag5/images/img1-pag5.png' },
+                    { value: 'medium', label: 'Mediana: menos de 10 páginas/200 productos', price: 500, img: '/paginas/pag5/images/img2-pag5.png' },
+                    { value: 'large', label: 'Grande: más de 10 páginas/200 productos', price: 1000, img: '/paginas/pag5/images/img3-pag5.png' },
+                    { value: 'unknown', label: 'No lo sé', price: 300, img: '/paginas/pag5/images/img4-pag5.png' }
                 ]
             },
             {
                 id: 'integration',
                 title: '¿La App estará integrada con otra Web, App o ERP?',
                 options: [
-                    { value: 'yes', label: 'Sí', price: 800, img: './paginas/pag6/img/img1-pag6.png' },
-                    { value: 'no', label: 'No', price: 0, img: './paginas/pag6/img/img2-pag6.png' },
-                    { value: 'unknown', label: 'No lo sé', price: 400, img: './paginas/pag6/img/img3-pag6.png' }
+                    { value: 'yes', label: 'Sí', price: 800, img: '/paginas/pag6/img/img1-pag6.png' },
+                    { value: 'no', label: 'No', price: 0, img: '/paginas/pag6/img/img2-pag6.png' },
+                    { value: 'unknown', label: 'No lo sé', price: 400, img: '/paginas/pag6/img/img3-pag6.png' }
                 ]
             },
             {
                 id: 'profiles',
                 title: '¿Los usuarios tienen sus propios perfiles?',
                 options: [
-                    { value: 'yes', label: 'Sí', price: 500, img: './paginas/pag7/img/answer-7-1.png' },
-                    { value: 'no', label: 'No', price: 0, img: './paginas/pag7/img/answer-7-2.png' },
-                    { value: 'unknown', label: 'No lo sé', price: 250, img: './paginas/pag7/img/answer-7-3.png' }
+                    { value: 'yes', label: 'Sí', price: 500, img: '/paginas/pag7/img/answer-7-1.png' },
+                    { value: 'no', label: 'No', price: 0, img: '/paginas/pag7/img/answer-7-2.png' },
+                    { value: 'unknown', label: 'No lo sé', price: 250, img: '/paginas/pag7/img/answer-7-3.png' }
                 ]
             },
             {
                 id: 'admin',
                 title: '¿Tu app necesita un panel de administración?',
                 options: [
-                    { value: 'yes', label: 'Sí', price: 700, img: './paginas/pag8/img/answer-8-1.png' },
-                    { value: 'no', label: 'No', price: 0, img: './paginas/pag8/img/answer-8-2.png' },
-                    { value: 'unknown', label: 'No lo sé', price: 350, img: './paginas/pag8/img/answer-8-3.png' }
+                    { value: 'yes', label: 'Sí', price: 700, img: '/paginas/pag8/img/answer-8-1.png' },
+                    { value: 'no', label: 'No', price: 0, img: '/paginas/pag8/img/answer-8-2.png' },
+                    { value: 'unknown', label: 'No lo sé', price: 350, img: '/paginas/pag8/img/answer-8-3.png' }
                 ]
             },
             {
                 id: 'languages',
                 title: '¿Qué idiomas usará tu aplicación?',
                 options: [
-                    { value: 'single', label: 'Un único idioma', price: 0, img: './paginas/pag9/img/answer-9-1.png' },
-                    { value: 'bilingual', label: 'Bilingüe', price: 300, img: './paginas/pag9/img/answer-9-2.png' },
-                    { value: 'multilingual', label: 'Multilingüe', price: 600, img: './paginas/pag9/img/answer-9-3.png' }
+                    { value: 'single', label: 'Un único idioma', price: 0, img: '/paginas/pag9/img/answer-9-1.png' },
+                    { value: 'bilingual', label: 'Bilingüe', price: 300, img: '/paginas/pag9/img/answer-9-2.png' },
+                    { value: 'multilingual', label: 'Multilingüe', price: 600, img: '/paginas/pag9/img/answer-9-3.png' }
                 ]
             },
             {
                 id: 'project_state',
                 title: '¿En qué estado se encuentra tu proyecto?',
                 options: [
-                    { value: 'idea', label: 'Solo es una idea', price: 0, img: './paginas/pag10/img/answer-10-1.png' },
-                    { value: 'sketch', label: 'Boceto ya preparado', price: -200, img: './paginas/pag10/img/answer-10-2.png' },
-                    { value: 'development', label: 'App en desarrollo', price: -500, img: './paginas/pag10/img/answer-10-3.png' },
-                    { value: 'developed', label: 'App ya desarrollada', price: -800, img: './paginas/pag10/img/answer-10-4.png' }
+                    { value: 'idea', label: 'Solo es una idea', price: 0, img: '/paginas/pag10/img/answer-10-1.png' },
+                    { value: 'sketch', label: 'Boceto ya preparado', price: -200, img: '/paginas/pag10/img/answer-10-2.png' },
+                    { value: 'development', label: 'App en desarrollo', price: -500, img: '/paginas/pag10/img/answer-10-3.png' },
+                    { value: 'developed', label: 'App ya desarrollada', price: -800, img: '/paginas/pag10/img/answer-10-4.png' }
                 ]
             }
         ];
@@ -163,7 +163,7 @@ export class AppCalculadora extends LitElement {
         return html`
             <div class="welcome-screen">
                 <div class="welcome-content">
-                    <img src="./paginas/pag principal/princi.png" alt="Calculadora de Apps" class="welcome-img">
+                    <img src="/paginas/pag principal/princi.png" alt="Calculadora de Apps" class="welcome-img">
                     <h1 class="welcome-title">¿Cuánto cuesta desarrollar mi <span class="highlight">app</span>?</h1>
                     <p class="welcome-subtitle">Calcula de forma rápida el coste para crear tu app, contestando estas sencillas preguntas.</p>
                     <button @click="${this.startCalculator}" class="start-button">
